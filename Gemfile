@@ -8,10 +8,11 @@ gem 'heroku'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
   gem 'sqlite3'
+  gem 'debugger'
 end
 
 group :production do
-  gem 'pg'
+  #gem 'pg'
 end
 
 

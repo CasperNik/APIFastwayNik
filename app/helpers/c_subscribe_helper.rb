@@ -1,0 +1,2 @@
+module CSubscribeHelper
+end

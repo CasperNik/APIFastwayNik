@@ -1,6 +1,11 @@
 Fastway1::Application.routes.draw do
   get "welcome/index"
   resources :user
+  get 'c_subscribe/' => 'c_subscribe#show'
+  get 'c_subscribe/:label/:link/:countofrecords' => 'c_subscribe#create'
+  get 'c_subscribe/check' => 'c_subscribe#changes'
+  get 'c_subscribe/:id'  => 'c_subscribe#delete', :as =>'c_subscribe/delete'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

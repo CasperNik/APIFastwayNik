@@ -1,0 +1,23 @@
+<h2>Subscribe ( <%= @sub.count %> )</h2>
+
+<table border="1" style="text-align: center">
+  <tr>
+    <th>ID</th>
+    <th>Label</th>
+    <th>Link</th>
+    <th>Count of records</th>
+    <th>Date</th>
+    <th></th>
+  </tr>
+
+  <% @sub.each do |s| %>
+      <tr>
+        <td><%= s.id %></td>
+        <td><%= s.label %></td>
+        <td><%= s.link %></td>
+        <td><%= s.countofrecords %></td>
+        <td><%= s.created_at %></td>
+        <td><%= link_to 'Delete', c_subscribe_delete_path(s) %></td>
+      </tr>
+  <% end %>
+</table>
